@@ -1,0 +1,315 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    user-select: none;
+    margin: 0;
+    padding: 0;
+    font-family: "Roboto", sans-serif;
+}
+
+html {
+    background-color: #5a5a5a;
+}
+
+body {
+    min-height: 100vh;
+    background-color: #000000;
+    color: white;
+    border-radius: 15px;
+    border: 5px solid #5a5a5a;
+}
+
+.left {
+    width: 27vw;
+    min-height: 80vh;
+}
+
+.left .library {
+    height: 100%;
+    position: relative;
+}
+
+.right {
+    width: 73vw;
+    background: linear-gradient(180deg, #222222 1%, #121212 20%);
+}
+
+.centre_top_cont img, svg {
+    width: 24px;
+}
+
+.navbar {
+    position: relative;
+}
+
+.navbar .logo {
+    cursor: pointer;
+    width: 32px;
+    height: 32px;
+    margin: 9px 30px 9px 30px;
+}
+
+.centre_top_cont {
+    gap: 8px;
+}
+
+.home, .search {
+    height: 38px;
+    width: 38px;
+    margin: 9px 0px 9px 0px;
+    transition: background-color 0.2s ease-in-out;
+}
+
+.home:hover {
+    transform: scale(105%);
+    background-color: #cfcece;
+}
+
+.home img, .search svg {
+    width: 22px;
+    height: 22px;
+}
+
+.heading {
+    align-items: start;
+    justify-content: space-between;
+    font-size: 10px;
+}
+
+.heading .add_playlist {
+    width: 15px;
+    fill: #4c4c4c;
+    border-radius: 50%;
+    padding: 6px;
+    background-color: transparent;
+    transition: fill 0.1s ease, background-color 0.3s ease;
+}
+
+.add_playlist:hover{
+    fill: black;
+    background-color: #d9d9d9;
+}
+
+.footer {
+    max-width: 100%;
+    position: absolute;
+    bottom: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.footer div {
+    display: flex;
+    gap: 20px;
+}
+
+@media only screen and (max-width: 695px) {
+    .footer div {
+        margin-top: 0;
+        flex-direction: column;
+        gap: 5px;
+    }
+    .footer {
+        gap: 10px;
+    }
+}
+
+.footer a {
+    text-decoration: none;
+    color: #b2b2b2;
+    font-weight: 600;
+    font-size: 10px;
+}
+
+.footer .official_cookies {
+    color: #fff;
+    font-size: 11px;
+}
+
+.footer .official_cookies:hover {
+    text-decoration: underline white 1px;
+}
+
+.buttons {
+    position: absolute;
+    right: 80px;
+    gap: 20px;
+}
+
+.buttons .sign {
+    font-size: 13px;
+    background-color: transparent;
+    border: none;
+    color:#b3b3b3;
+    font-weight: 600;
+    position: relative;
+    top: 0;
+    left: 0;
+    transform: scale(100%);
+    transition: color 0.1s ease, top 0.1s ease;
+}
+
+.sign:hover{
+    color: white;
+    top: 1px;
+}
+
+.buttons .log {
+    font-size: 14px;
+    background-color: white;
+    border: none;
+    font-weight: 600;
+    padding: 12px 20px 12px 20px;
+    border-radius: 20px;
+    transform: scale(100%);
+    transition: background-color 0.1s ease, transform 0.2s ease;
+}
+
+.log:hover{
+    background-color: rgb(227, 227, 227);
+    transform: scale(103%);
+}
+
+.search_bar {
+    position: relative;
+    height: 45px;
+    width: 245px;
+    overflow: hidden;
+}
+
+.search_bar .search {
+    left: 2px;
+    z-index: 10;
+}
+
+.search_bar input, .search_bar svg {
+    transition: background-color 0.4s ease, border 0.4s ease, fill 0.4s ease, outline 0.4s ease;
+}
+
+.search_bar input:hover {
+    background-color: #2d2d2d;
+    border: 1px solid #4c4c4c;
+}
+
+.search:hover svg, #hovered_svg, .hovered_svg {
+    fill: black;
+}
+
+.search:hover + input {
+    background-color: #2d2d2d;
+    border: 1px solid #4c4c4c;
+}
+
+.search_bar input {
+    background-color: #1f1f1f;
+    color: white;
+    padding: 13px 40px 13px 40px;
+    border: 1px solid transparent;
+    outline: 2px solid transparent;
+    width: 160px;
+    border-radius: 20px;
+    position: relative;
+}
+
+.search_bar::after {
+    position: absolute;
+    content: "|";
+    color: #8f8f8f;
+    right: 30px;
+    font-weight: 300;
+    font-size: 18px;
+}
+
+input::placeholder {
+    color: #B3B3B3;
+    font-size: 13px;
+    font-weight: 400;
+}
+
+input:focus {
+    outline: 2px solid white;
+}
+
+#hovered_inp {
+    background-color: #2d2d2d;
+}
+
+.trendingSongs .cards{
+    display: flex;
+}
+
+.trendingSongs .card{
+    position: relative;
+    width: 132px;
+    padding: 2px;
+    z-index: 999;
+}
+
+.card::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+    background-image: linear-gradient(to bottom, transparent 20%, #1d1d1d 50%);
+    opacity: 0;
+    z-index: -1;
+    transition: opacity 0.2s ease;
+} 
+.card:hover::after{
+    opacity: 1;
+}
+
+.card .play{
+    position: absolute;
+    top: 96px;
+    left: 82px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 4px;
+    background-color: #1ed760;
+    width: 28px;
+    height: 28px;   
+    border-radius: 50%;
+    opacity: 0; 
+    transition: top 0.2s ease, opacity 0.2s ease;
+}
+
+.card:hover .play{
+    top: 84px;
+    opacity: 1;
+}
+
+.card .play svg{
+    width: 18px;
+}
+
+.trendingSongs h2{
+    margin: 10px;
+    font-size: 20px;
+}
+.trendingSongs .card img{
+    max-width: 115px;
+    max-height: 115px;
+}
+.trendingSongs .card .name{
+    font-size: 13px;
+    margin-top: 3px;
+}
+.trendingSongs .card .singers{
+    font-size: 11px;
+    line-height: 15px;
+}
+
+.trendingSongs .card .name,.trendingSongs .card .singers span{
+    text-decoration: none;
+    transition: text-decoration 1s ease;
+}
+
+.trendingSongs .card .name:hover, .trendingSongs .card .singers span:hover{
+    text-decoration: underline solid white;
+}
