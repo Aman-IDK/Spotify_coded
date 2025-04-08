@@ -30,6 +30,7 @@ body {
 }
 
 .right {
+    position: relative;
     width: 73vw;
     background: linear-gradient(180deg, #222222 1%, #121212 20%);
 }
@@ -312,4 +313,19 @@ input:focus {
 
 .trendingSongs .card .name:hover, .trendingSongs .card .singers span:hover{
     text-decoration: underline solid white;
+}
+
+.playbar{
+    position: absolute;
+    bottom: 0;
+    background-color: #1ed760;
+    width: 100%;
+    padding: 12px;
+}
+
+.playbar .songbuttons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
 }
