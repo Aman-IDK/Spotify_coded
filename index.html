@@ -32,7 +32,7 @@
         </div>
     </div>
     <div class="main flex">
-        <div class="left bg-dark-grey rounded m-1 p-1 rem-m-top">
+        <div class="left rem-p-bottom bg-dark-grey rounded m-1 p-1 rem-m-top">
             <div class="library">
                 <div class="heading flex">
                     <h2 class="m-1">Your Library</h2>
@@ -42,7 +42,12 @@
                             d="M15.25 8a.75.75 0 0 1-.75.75H8.75v5.75a.75.75 0 0 1-1.5 0V8.75H1.5a.75.75 0 0 1 0-1.5h5.75V1.5a.75.75 0 0 1 1.5 0v5.75h5.75a.75.75 0 0 1 .75.75z" />
                     </svg>
                 </div>
-                <div class="footer m-1">
+                <div class="songList">
+                    <ul>
+                    </ul>
+                </div>
+                <div class="seprator"></div>
+                <div class="footer m-1 rem-m-bottom">
                     <div>
                         <a href="https://www.spotify.com/in-en/legal/">Legal</a>
                         <a href="https://www.spotify.com/in-en/safetyandprivacy/">Safety & Privacy Center</a>
@@ -50,11 +55,11 @@
                     </div>
                     <div>
                         <a href="https://www.spotify.com/in-en/legal/cookies-policy/">Cookies</a>
-                        <a href="https://www.spotify.com/in-en/legal/privacy-policy/#s3">About Ads</a>
-                        <a href="https://www.spotify.com/in-en/accessibility/">Accessibility</a>
+                        <!-- <a href="https://www.spotify.com/in-en/legal/privacy-policy/#s3">About Ads</a>
+                        <a href="https://www.spotify.com/in-en/accessibility/">Accessibility</a> -->
+                        <a href="https://www.spotify.com/legal/cookies-policy/" class="official_cookies" target="_blank"
+                            rel="noopener">Cookies</a>
                     </div>
-                    <a href="https://www.spotify.com/legal/cookies-policy/" class="official_cookies" target="_blank"
-                        rel="noopener">Cookies</a>
                 </div>
             </div>
         </div>
@@ -91,10 +96,19 @@
                         <p class="m-1 rem-m-top singers color-grey"><span>Afusic</span>, <span>AliSoomroMusic</span></p>
                     </div>
                     <div class="playbar">
-                        <div class="songbuttons">
-                            <img src="previous.svg" alt=""> 
-                            <img src="play.svg" alt=""> 
-                            <img src="next.svg" alt=""> 
+                        <div class="abovebar">
+                            <div class="songinfo">
+                            </div>
+                            <div class="songtime">
+                            </div>
+                        </div>
+                        <div class="songbuttons invert">
+                            <img id="previous" src="previous.svg" alt="">
+                            <img id="play" src="play.svg" alt="">
+                            <img id="next" src="next.svg" alt="">
+                        </div>
+                        <div class="seekbar">
+                            <div class="circle"></div>
                         </div>
                     </div>
                 </div>

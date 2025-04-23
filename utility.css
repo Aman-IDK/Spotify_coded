@@ -47,6 +47,9 @@
 .rem-m-bottom{
     margin-bottom: 0;
 }
+.rem-p-bottom{
+    padding-bottom: 0;
+}
 .rounded{
    border-radius: 7px;
 }

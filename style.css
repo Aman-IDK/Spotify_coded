@@ -21,21 +21,24 @@ body {
 
 .left {
     width: 27vw;
-    min-height: 80vh;
+    min-height: 85vh;
 }
 
 .left .library {
-    height: 100%;
+    min-height: 100%;
     position: relative;
+    overflow: hidden;
 }
 
 .right {
     position: relative;
     width: 73vw;
+    min-height: 85vh;
     background: linear-gradient(180deg, #222222 1%, #121212 20%);
 }
 
-.centre_top_cont img, svg {
+.centre_top_cont img,
+svg {
     width: 24px;
 }
 
@@ -54,7 +57,8 @@ body {
     gap: 8px;
 }
 
-.home, .search {
+.home,
+.search {
     height: 38px;
     width: 38px;
     margin: 9px 0px 9px 0px;
@@ -66,7 +70,8 @@ body {
     background-color: #cfcece;
 }
 
-.home img, .search svg {
+.home img,
+.search svg {
     width: 22px;
     height: 22px;
 }
@@ -86,7 +91,7 @@ body {
     transition: fill 0.1s ease, background-color 0.3s ease;
 }
 
-.add_playlist:hover{
+.add_playlist:hover {
     fill: black;
     background-color: #d9d9d9;
 }
@@ -94,10 +99,12 @@ body {
 .footer {
     max-width: 100%;
     position: absolute;
-    bottom: 40px;
+    bottom: 0px;
+    left: 2px;
     display: flex;
     flex-direction: column;
-    gap: 14px;
+    gap: 6px;
+    padding-bottom: 3px;
 }
 
 .footer div {
@@ -111,6 +118,7 @@ body {
         flex-direction: column;
         gap: 5px;
     }
+
     .footer {
         gap: 10px;
     }
@@ -142,7 +150,7 @@ body {
     font-size: 13px;
     background-color: transparent;
     border: none;
-    color:#b3b3b3;
+    color: #b3b3b3;
     font-weight: 600;
     position: relative;
     top: 0;
@@ -151,7 +159,7 @@ body {
     transition: color 0.1s ease, top 0.1s ease;
 }
 
-.sign:hover{
+.sign:hover {
     color: white;
     top: 1px;
 }
@@ -167,7 +175,7 @@ body {
     transition: background-color 0.1s ease, transform 0.2s ease;
 }
 
-.log:hover{
+.log:hover {
     background-color: rgb(227, 227, 227);
     transform: scale(103%);
 }
@@ -184,7 +192,8 @@ body {
     z-index: 10;
 }
 
-.search_bar input, .search_bar svg {
+.search_bar input,
+.search_bar svg {
     transition: background-color 0.4s ease, border 0.4s ease, fill 0.4s ease, outline 0.4s ease;
 }
 
@@ -193,11 +202,13 @@ body {
     border: 1px solid #4c4c4c;
 }
 
-.search:hover svg, #hovered_svg, .hovered_svg {
+.search:hover svg,
+#hovered_svg,
+.hovered_svg {
     fill: black;
 }
 
-.search:hover + input {
+.search:hover+input {
     background-color: #2d2d2d;
     border: 1px solid #4c4c4c;
 }
@@ -236,18 +247,18 @@ input:focus {
     background-color: #2d2d2d;
 }
 
-.trendingSongs .cards{
+.trendingSongs .cards {
     display: flex;
 }
 
-.trendingSongs .card{
+.trendingSongs .card {
     position: relative;
     width: 132px;
     padding: 2px;
     z-index: 999;
 }
 
-.card::after{
+.card::after {
     content: "";
     position: absolute;
     top: 0;
@@ -259,12 +270,13 @@ input:focus {
     opacity: 0;
     z-index: -1;
     transition: opacity 0.2s ease;
-} 
-.card:hover::after{
+}
+
+.card:hover::after {
     opacity: 1;
 }
 
-.card .play{
+.card .play {
     position: absolute;
     top: 96px;
     left: 82px;
@@ -274,58 +286,171 @@ input:focus {
     padding: 4px;
     background-color: #1ed760;
     width: 28px;
-    height: 28px;   
+    height: 28px;
     border-radius: 50%;
-    opacity: 0; 
+    opacity: 0;
     transition: top 0.2s ease, opacity 0.2s ease;
 }
 
-.card:hover .play{
+.card:hover .play {
     top: 84px;
     opacity: 1;
 }
 
-.card .play svg{
+.card .play svg {
     width: 18px;
 }
 
-.trendingSongs h2{
+.trendingSongs h2 {
     margin: 10px;
     font-size: 20px;
 }
-.trendingSongs .card img{
+
+.trendingSongs .card img {
     max-width: 115px;
     max-height: 115px;
 }
-.trendingSongs .card .name{
+
+.trendingSongs .card .name {
     font-size: 13px;
     margin-top: 3px;
 }
-.trendingSongs .card .singers{
+
+.trendingSongs .card .singers {
     font-size: 11px;
     line-height: 15px;
 }
 
-.trendingSongs .card .name,.trendingSongs .card .singers span{
+.trendingSongs .card .name,
+.trendingSongs .card .singers span {
     text-decoration: none;
     transition: text-decoration 1s ease;
 }
 
-.trendingSongs .card .name:hover, .trendingSongs .card .singers span:hover{
+.trendingSongs .card .name:hover,
+.trendingSongs .card .singers span:hover {
     text-decoration: underline solid white;
 }
 
-.playbar{
-    position: absolute;
-    bottom: 0;
-    background-color: #1ed760;
-    width: 100%;
+.playbar {
+    position: fixed;
+    bottom: 14px;
+    background-color: #292929;
+    width: 63.75%;
+    height: 35px;
     padding: 12px;
+    border-radius: 18px;
 }
 
-.playbar .songbuttons{
+.playbar .songbuttons {
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 12px;
+}
+
+.playnow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.playnow span {
+    width: 44px;
+    padding: 5px;
+}
+
+.songList {
+    line-break: auto;
+    max-height: 270px;
+    /* max-height: 410px; ??? */
+    overflow: auto;
+}
+
+.songList ul {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 0 10px;
+}
+
+.songList ul li {
+    font-size: 10px;
+    list-style-type: number;
+    display: flex;
+    cursor: pointer;
+    gap: 8px;
+    border: 2px solid grey;
+    border-radius: 5px;
+    padding: 9px 5px;
+}
+
+.info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 1000px;
+}
+
+.seprator {
+    background-color: grey;
+    width: 252px;
+    height: 1px;
+    position: relative;
+    left: 10px;
+    border-radius: 12px;
+}
+
+/* Scrollbar Track */
+.songList::-webkit-scrollbar {
+    width: 12px;
+    height: 12px;
+}
+
+/* Scrollbar Track Background */
+.songList::-webkit-scrollbar-track {
+    background: rgb(45, 40, 40);
+}
+
+/* Scrollbar Thumb */
+.songList::-webkit-scrollbar-thumb {
+    background: grey;
+    border-radius: 5px;
+    border: 2px solid rgb(45, 40, 40);;
+}
+
+.seekbar{
+    height: 2px;
+    width: 95%;
+    background-color: white;
+    border-radius: 12px;
+    position: absolute;
+    bottom: 2px;
+    margin: 4px;
+}
+.circle{
+    width: 13px;
+    height: 13px;
+    border-radius: 13px;
+    background-color: white;
+    position: absolute;
+    left: -1px;
+    bottom: -5px;
+    transition: left 0.5s;
+}
+
+.songbuttons img{
+    cursor: pointer;
+}
+
+.songinfo, .songtime{
+    font-size: 11px;
+    position: absolute;
+    top: 17px;
+}
+.songtime{
+    right: 24px;
+}
+.songinfo{
+    left: 24px;
 }
